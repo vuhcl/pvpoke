@@ -972,7 +972,27 @@ var InterfaceMaster = (function () {
 					var moveCounts = Pokemon.calculateMoveCounts(pokemon.fastMove, chargedMoves[n]);
 
 					$moveDetails.find(".move-count span").html(moveCounts[0] + " - " + moveCounts[1] + " - " + moveCounts[2]);
-
+					
+					// Add move cycle details
+					var fastMovesPerCycle = Math.ceil(chargedMoves[n].energy / pokemon.fastMove.energyGain);
+					var cycleDuration = (fastMovesPerCycle * pokemon.fastMove.cooldown) + 500;
+					var cycleDurationStr = (cycleDuration / 500) + " turns (" + (cycleDuration / 1000) + " s)";
+					var fastDamage = Math.round( (fastMovesPerCycle * pokemon.fastMove.power) * 10) / 10;
+					var chargedDamage = Math.round( (chargedMoves[n].power) * 10) / 10;
+					var cycleDamage = Math.round( (fastDamage + chargedDamage) * 10) / 10;
+					var cycleDPT = Math.round( (cycleDamage / (cycleDuration / 500)) * 100) / 100;
+					
+					movesetStats.push({ title: "Fast Damage", value: fastDamage});
+					movesetStats.push({ title: "Charged Damage", value: chargedDamage});
+					movesetStats.push({ title: "Total Damage", value: cycleDamage});
+					movesetStats.push({ title: "Fast Moves", value: moveCounts[0] + " - " + moveCounts[1] + " - " + moveCounts[2]});
+					movesetStats.push({ title: "Cycle Duration", value: cycleDurationStr});
+					movesetStats.push({ title: "Damage Per Turn", value: cycleDPT});
+					for(var i = 0; i < movesetStats.length; i++){
+						var $stat = $("<div class=\"stat\"><h4>"+movesetStats[i].title+"</h4>"+"<span>"+movesetStats[i].value+"</span></div>");
+						$moveDetails.find(".movecycleStats").append($stat);
+					}
+				
 					// Highlight this move if it's in the recommended moveset
 
 					for(var j = 0; j < pokemon.chargedMoves.length; j++){
