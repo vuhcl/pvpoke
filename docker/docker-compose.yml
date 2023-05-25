@@ -7,6 +7,6 @@ services:
       context: ..
       dockerfile: docker/Dockerfile
     ports:
-      - 80:80
+      - 8033:80
     volumes:
       - ../src:/var/www/html/pvpoke/src
