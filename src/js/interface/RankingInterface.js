@@ -974,6 +974,7 @@ var InterfaceMaster = (function () {
 					$moveDetails.find(".move-count span").html(moveCounts[0] + " - " + moveCounts[1] + " - " + moveCounts[2]);
 					
 					// Add move cycle details
+					var movesetStats = [];
 					var fastMovesPerCycle = Math.ceil(chargedMoves[n].energy / pokemon.fastMove.energyGain);
 					var cycleDuration = (fastMovesPerCycle * pokemon.fastMove.cooldown) + 500;
 					var cycleDurationStr = (cycleDuration / 500) + " turns (" + (cycleDuration / 1000) + " s)";
