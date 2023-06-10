@@ -20,23 +20,7 @@
 		<h2 class="icon-team">Team Builder</h2>
 		<p>Build your own team and see their type matchups and potential counters.</p>
 	</a>
-	<a href="<?php echo $WEB_ROOT; ?>contribute/" class="button">
-		<h2 class="icon-contribute">Contribute</h2>
-		<p>Check out the source code on Github or lend your support through Patreon.</p>
-	</a>
 
-	<h3>Pokemon Scarlet &amp; Violet</h3>
-
-	<a href="<?php echo $WEB_ROOT; ?>tera/" class="button tera-button">
-		<h2 class="icon-tera">Tera Raid Counter Calculator</h2>
-		<p>Take on Tera Raid bosses with this tool to look up Pokemon with the best type matchups.</p>
-	</a>
-
-	<?php require 'modules/ads/body-728.php'; ?>
-
-	<?php if($_SETTINGS->ads == 1) : ?>
-		<span data-ccpa-link="1"></span>
-	<?php endif; ?>
 
 	<!--Update section for updates-->
 	<h3>What's New</h3>
@@ -46,22 +30,6 @@
 		<li>Improved ranking search speed</li>
 		<li>Team Builder has a setting to include Pokemon of the same species in team suggestions. This setting is off by default and enabled for Silph formats.</li>
 	</ul>
-
-	<h3>Latest Article</h3>
-
-	<div class="article-item flex">
-		<div class="col-3">
-			<a href="<?php echo $WEB_ROOT; ?>articles/community-day/23-04-togetic/">
-				<img src="<?php echo $WEB_ROOT; ?>articles/article-assets/community-day/23-04-togetic/thumb.jpg">
-			</a>
-		</div>
-		<div class="col-9">
-			<h4><a href="<?php echo $WEB_ROOT; ?>articles/community-day/23-04-togetic/">Togetic Community Day Guide for PvP</a></h4>
-			<div class="date">April 14, 2023</div>
-			<p>Togetic is a charming addition to the Community Day roster, and its evolution, Togekiss, has play in all three leagues. Find out what to look out for in PvP!</p>
-			<div class="tags"><a href="<?php echo $WEB_ROOT; ?>articles?tag=Community Day"># Community Day</a><a href="<?php echo $WEB_ROOT; ?>articles?tag=Infographic"># Infographic</a></div>
-		</div>
-	</div>
 </div>
 
 <?php

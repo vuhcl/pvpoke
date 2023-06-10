@@ -189,9 +189,6 @@ if(! isset($OG_IMAGE)){
 	}
 	?>
 </script>
-
-	<?php require_once 'modules/ads/base-code.php'; ?>
-
 </head>
 
 <body>
@@ -241,11 +238,7 @@ if(! isset($OG_IMAGE)){
 					<div class="submenu">
 						<div class="submenu-wrap">
 							<a class="icon-moves" href="<?php echo $WEB_ROOT; ?>moves/">Moves</a>
-							<a class="icon-articles" href="<?php echo $WEB_ROOT; ?>articles/">Articles</a>
-							<a class="icon-contribute" href="<?php echo $WEB_ROOT; ?>contribute/">Contribute</a>
 							<a class="icon-settings" href="<?php echo $WEB_ROOT; ?>settings/">Settings</a>
-							<a class="icon-twitter" href="https://twitter.com/pvpoke" target="_blank">Twitter</a>
-							<a class="icon-tera" href="<?php echo $WEB_ROOT; ?>tera/">Tera Raid Counters</a>
 						</div>
 					</div>
 				</div>
