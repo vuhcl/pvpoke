@@ -2,13 +2,6 @@
 	</div><!--end #main-wrap-->
 
 
-	<?php
-	// Localhost developer panel
-	if (strpos($WEB_ROOT, 'src') !== false) {
-	    require 'modules/developer-panel.php';
-	}
-	?>
-
 	<footer>
 		<p class="copyright">Version <a href="https://github.com/pvpoke/pvpoke/releases"><?php echo $SITE_VERSION; ?></a> &copy; 2023 PvPoke LLC, released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a> | <a href="<?php echo $WEB_ROOT;?>privacy/">Privacy Policy</a></p>
 		<p>Pokémon and Pokémon GO are copyright of The Pokémon Company, Niantic, Inc., and Nintendo. All trademarked images and names are property of their respective owners, and any such material is used on this site for educational purposes only. PvPoke LLC has no affiliation with The Pokémon Company, Niantic, Inc., or Nintendo.</p>
