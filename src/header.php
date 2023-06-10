@@ -28,10 +28,6 @@ if(isset($_COOKIE['settings'])){
 		$_SETTINGS->pokeboxLastDateTime = 0;
 	}
 
-	if(! isset($_SETTINGS->ads)){
-		$_SETTINGS->ads = 1;
-	}
-
 	if(! isset($_SETTINGS->xls)){
 		$_SETTINGS->xls = 1;
 	}
@@ -57,7 +53,6 @@ if(isset($_COOKIE['settings'])){
 		'theme' => 'default',
 		'gamemaster' => 'gamemaster',
 		'pokeboxId' => 0,
-		'ads' => 1,
 		'xls' => 1,
 		'rankingDetails' => 'one-page',
 		'hardMovesetLinks' => 0
@@ -121,14 +116,8 @@ if(! isset($OG_IMAGE)){
 	<link id="favicon" rel="icon" href="<?php echo $WEB_ROOT; ?>img/favicon.png">
 <?php endif; ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/style.css?v=165">
-
 <?php if(strpos($META_TITLE, 'Train') !== false): ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/train.css?v=20">
-<?php endif; ?>
-
-<?php if(strpos($_SERVER['REQUEST_URI'], 'articles') !== false): ?>
-	<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT; ?>css/article-extras.css?v=12">
 <?php endif; ?>
 
 <?php if((isset($_SETTINGS->theme))&&($_SETTINGS->theme != "default")): ?>
@@ -192,18 +181,6 @@ if(! isset($OG_IMAGE)){
 </head>
 
 <body>
-
-	<?php if(false): // Removing this but saving code for future use ?>
-		<?php if(strpos($_SERVER['REQUEST_URI'], 'season-13') == false): ?>
-			<div class="header-ticker">
-				<a href="https://pvpoke.com/season-13/rankings/">Preview Season 13 Updates</a>
-			</div>
-		<?php else: ?>
-			<div class="header-ticker old-version">
-				<a href="https://pvpoke.com/rankings/">Return to Season 12</a>
-			</div>
-		<?php endif; ?>
-	<?php endif; ?>
 
 	<header>
 		<div class="header-wrap">

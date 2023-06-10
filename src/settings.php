@@ -30,10 +30,6 @@ require_once 'header.php';
 		<div class="check xls <?php if($_SETTINGS->xls == 1) : ?>on<?php endif; ?>"><span></span> Show XL Pokemon</div>
 		<p>Choose whether to show Pokemon over Level 40 in the primary rankings or Team Builder results. You can temporarily toggle them on the respective pages.</p>
 
-		<h3>Advertisements</h3>
-		<div class="check ads <?php if($_SETTINGS->ads == 1) : ?>on<?php endif; ?>"><span></span> Show ads</div>
-		<p>Ads help support the site and the Pokemon GO community!</p>
-
 		<h3>Battle Timeline</h3>
 		<div class="check animate-timeline <?php if($_SETTINGS->animateTimeline == 1) : ?>on<?php endif; ?>"><span></span> Animate after generating results</div>
 
